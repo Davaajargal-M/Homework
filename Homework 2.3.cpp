@@ -11,10 +11,12 @@ int main(){
 	 
 	for(int i=0; i<str.size(); i++){
 		if(str[i]=='a'||str[i]=='A'){
-			str[i]=str[i+1];
-		}else{
-			cout<<str[i];
+			for(int j=i; j<str.size()-1; j++){
+				str[j]=str[j+1];
+				str.size()-1=='\0';
+				}
 			}
+		cout<<str[i];
 		}
 		
 	return 0;
