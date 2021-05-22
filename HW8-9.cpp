@@ -4,17 +4,19 @@
 using namespace std; 
 
 int main(){
-	string text = "The code includes definitions for 128 characters: most of these are the printable characters of the alphabet such as abc, ABC, 123, and ?&!.";
-	int words = 0;
+	string text = "Easy and fast service, very accurate and powerful.";
+	int vowels = 0, consonants = 0;
 	
 	for(int i = 0; i<=text.length(); i++){
-		if(text[i]==' ' || text[i]=='\0'){
-			words++;
+		if(text[i]>='a' && text[i]<='z'|| text[i]>='A' && text[i]<='Z'){
+			if(text[i]=='a' ||text[i]=='A' ||text[i]=='e' || text[i]=='E' ||text[i]=='o' ||text[i]=='O' ||text[i]=='u' ||text[i]=='U' ||text[i]=='i' ||text[i]=='I' ||text[i]=='y' ||text[i]=='Y'){
+				vowels++;
+			}else{
+				consonants++;
+			}
 		}
 	}
-	cout<<"Total words of this text: "<<words;
+	cout<<"Total vowels: "<<vowels<<endl<<"Total consonants: "<<consonants;
 	
 	
-	return 0; 
-}
-
+return 0; 
